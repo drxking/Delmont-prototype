@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Delmont Fire and Safety LLC</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/essentials.css">
+    <link rel="stylesheet" href="/stylesheets/products.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="slider">
+            <div class="img-wrapper">
+                <img src="/images/product-1.jpg">
+            </div>
+            <div class="img-wrapper">
+                <img src="/images/product-2.jpg">
+
+            </div>
+            <div class="img-wrapper">
+                <img src="/images/product-3.jpg">
+            </div>
+            <div class="img-wrapper">
+                <img src="/images/product-4.png">
+
+            </div>
+            <div class="img-wrapper">
+                <img src="/images/product-5.png">
+
+            </div>
+
+        </div>
+    </div>
+    <main>
+        <%-include('header')%>
+            <section>
+                <div class="h1-wrapper">
+                    <h1>Products</h1>
+                </div>
+
+                <p class="_80">Delmont Fire & Safety LLC collaborates with a variety of manufacturers to provide
+                    comprehensive fire protection solutions tailored to your specific needs. Our skilled team is
+                    dedicated to selecting the appropriate components and systems for each unique application, staying
+                    current with the latest advancements and technologies in the fire protection industry.</p><br>
+                <h2>Fire Detection & Emergency Lighting System
+                </h2>
+                <ul>
+                    <li>
+                        <p>Addressable Fire Alarm with Integrated Voice Evacuation System</p>
+                    </li>
+                    <li>
+                        <p>Conventional Fire Detection & Alarm System</p>
+                    </li>
+                    <li>
+                        <p>Explosion Proof Fire Alarm & Detection System</p>
+                    </li>
+                    <li>
+                        <p>Self-Contained Emergency & Exit Light System</p>
+                    </li>
+                    <li>
+                        <p>Central Battery Emergency Light System</p>
+                    </li>
+                    <li>
+                        <p>Flame Detection System</p>
+                    </li>
+                    <li>
+                        <p>Aspiration Smoke Detection System</p>
+                    </li>
+                </ul>
+                <br>
+                <h2>
+                    Fire Protection and Clean Agent Suppression System
+                </h2>
+                <ul>
+                    <li>
+                        <p>Fire Hose Reel and Wet/Dry Riser System</p>
+                    </li>
+                    <li>
+                        <p>Stand Pipe and Hose System</p>
+                    </li>
+                    <li>
+                        <p>External Fire Hydrant System</p>
+                    </li>
+                    <li>
+                        <p>Fire Fighting Pump Sets</p>
+                    </li>
+                    <li>
+                        <p>Fire Fighting Sprinkler System</p>
+                    </li>
+                    <li>
+                        <p>Clean Agent Fire Suppression System</p>
+                    </li>
+                    <li>
+                        <p>Wet Chemical Fire Suppression System</p>
+                    </li>
+                    <li>
+                        <p>Fire Extinguishers and Fire Blankets</p>
+                    </li>
+                </ul>
+                <div class="faq">
+                    <h2 class="faq-text">FAQ</h2>
+                    <ul style="list-style: decimal;">
+                    <div class="wrapper">
+                        <h2><li>What types of fire detection systems do you offer?</li></h2>
+                        <p>We offer a wide range of fire detection systems, including addressable fire alarms with
+                            integrated voice evacuation, conventional fire detection and alarm systems, explosion-proof
+                            fire alarms, flame detection systems, and aspiration smoke detection systems.</p>
+                    </div>
+                    <div class="wrapper">
+                        <h2><li>How do addressable fire alarm systems differ from conventional ones?</li></h2>
+                        <p>Addressable fire alarm systems provide precise detection and allow for pinpointing the exact
+                            location of a fire, making them ideal for larger or more complex buildings. Conventional
+                            systems, on the other hand, are typically used in smaller applications and detect fires in
+                            specific zones without exact location details.</p>
+                    </div>
+                    <div class="wrapper">
+                        <h2><li>Can you explain the difference between self-contained emergency lights and central
+                            battery emergency light systems?</li></h2>
+                        <p>Self-contained emergency lights have their own built-in battery and operate independently,
+                            making them easy to install and maintain. Central battery systems, on the other hand, have a
+                            centralized power source that supplies power to multiple emergency lights, making them ideal
+                            for larger facilities</p>
+                    </div>
+                    <div class="wrapper">
+                        <h2><li>What are the benefits of an aspiration smoke detection system?</li></h2>
+                        <p>Aspiration smoke detection systems continuously sample the air to detect smoke particles at
+                            the earliest stages of fire development. They offer early warning capabilities, making them
+                            ideal for sensitive or high-value environments where early detection is critical.
+
+                        </p>
+                    </div>
+                    </ul>
+                </div>
+            </section>
+
+
+            <%-include('footer')%>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let clutter = ""
+        let text = document.querySelector(".h1-wrapper h1").textContent.split("");
+        text.forEach((span) => {
+            clutter += `<span> ${span} </span>`
+        })
+        document.querySelector(".h1-wrapper h1").innerHTML = clutter
+
+        let tl = gsap.timeline()
+        tl.from(".h1-wrapper h1 span", {
+            y: 200,
+            stagger: 0.05,
+            // duration:0.4
+        })
+        tl.from("section h2,section p, section ul", {
+            opacity: 0,
+            duration: 0.9,
+            stagger: 0.05
+        })
+
+
+        gsap.to(".slider", {
+            x: `-80%`,
+            scrollTrigger: {
+                start: "top top",
+                end: "bottom center",
+                scrub: 5,
+            }
+        })
+    </script>
+
+</body>
+
+</html>

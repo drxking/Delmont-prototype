@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .footer-wrapper {
+            border-radius: 50px 50px 0 0;
+        }
+
+        footer {
+            padding: 4vw 7vw;
+            display: flex;
+            align-items: start;
+            justify-content: space-evenly;
+            background-color: #000;
+            color: var(--text-color);
+            min-height: 40vh;
+            border-radius: 50px 50px 0 0;
+            margin-top: 5vw;
+        }
+
+        footer>div {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            /* border-right: 1px solid gray; */
+            padding: 0 2vw;
+            height: 100%;
+        }
+
+        footer h2 {
+            font-size: 1.8vw;
+            text-transform: uppercase;
+            margin-bottom: 1vw;
+            line-height: 1.5;
+        }
+
+        footer p {
+            font-size: 1vw;
+            line-height: 1.7 !important;
+        }
+
+        .talk-to-us a {
+            font-size: 1vw;
+            color: var(--text-color);
+            text-decoration: underline gray;
+        }
+
+        .outro {
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2vw 0;
+        }
+
+        .outro .logo {
+            height: 8vw;
+        }
+
+        .outro .logo a img:nth-child(1) {
+            height: 100%;
+            object-fit: cover;
+            filter: drop-shadow(-5px 0px 1px rgba(0, 0, 0, 0.9));
+        }
+
+        .outro .logo a {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 0.5vw;
+        }
+
+        .outro .logo img:nth-child(2) {
+            height: 35%;
+            mix-blend-mode: difference;
+            object-fit: cover;
+        }
+
+        .copyright {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            padding: 0.5vw 10vw;
+        }
+
+        .copyright p {
+            font-size: 12px;
+            color: var(--text-gray);
+            text-align: center;
+        }
+
+        @media (max-width: 950px) {
+            .outro .logo {
+                height: 10vw;
+            }
+
+            footer h2 {
+                font-size: 2.2vw;
+            }
+
+            .talk-to-us a{
+                font-size: 1.5vw;
+            }
+            footer p {
+                font-size: 1.5vw;
+            }
+
+        }
+
+        @media (max-width: 690px) {
+            .outro .logo {
+                height: 14vw;
+            }
+
+            .footer-wrapper {
+                border-radius: 30px 30px 0 0;
+            }
+
+            footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 4vw 5vw;
+            }
+
+            footer>div {
+                width: 90%;
+                border-right: none;
+                border-bottom: 1px solid gray;
+                padding: 4vw 2vw;
+            }
+            footer h2 {
+                line-height: 2;
+                font-size: 3vw;
+            }
+            .talk-to-us a{
+                line-height: 2;
+                font-size: 2vw;
+            }
+            footer p {
+                line-height: 2;
+                font-size: 2vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .outro .logo {
+                height: 17vw;
+            }
+
+            .copyright p {
+                font-size: 10px;
+            }
+
+            footer>div {
+                width: 100%;
+                padding: 10vw 0;
+            }
+
+            footer>div p {
+                line-height: 2;
+            }
+
+            footer h2 {
+                line-height: 2;
+                font-size: 23px;
+            }
+            .talk-to-us a{
+                line-height: 2;
+                font-size: 17px;
+            }
+            footer p {
+                line-height: 2;
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="footer-wrapper" style="background-color: #000;">
+        <footer>
+            <div class="about">
+                <h2>ABOUT DELMONT</h2>
+                <p>Headquartered in Dubai UAE, <br>
+                    Delmont Fire & Safety LLC is a provider of fire safety equipment,
+                    systems
+                    and services.</p>
+            </div>
+            <div class="location">
+                <h2>location</h2>
+                <p>Warehouse No.4, <br>
+                    Next to Madina Supermarket, <br>
+                    Ras Al Khor Industrial Area, <br>
+                    Dubai, United Arab Emirates</p>
+            </div>
+            <div class="timing">
+                <h2>office timing</h2>
+                <p>Monday to Friday – 8.30am to 6 pm</p>
+                <p>Saturday- 8.30am to 2.30pm</p>
+                <p>Sunday off.</p>
+            </div>
+            <div class="talk-to-us">
+                <h2>talk to us</h2>
+                <a href=""><p>+971 4 295 5779</p></a>
+                <a href=""><p>info@delmont.ae</p></a>
+            </div>
+
+        </footer>
+        <div class="outro">
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/delmont-logo.png">
+                    <img class="text" src="/images/text.png">
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Copyright - Delmont Fire & Safety LLC. All Rights Reserved. | Developed by Sudip Acharya</p>
+        </div>
+    </div>
+</body>
+
+</html>

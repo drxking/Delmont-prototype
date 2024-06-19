@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/essentials.css">
+    <style>
+        body {
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.7vw 4vw;
+            background-color: var(--primary-color);
+        }
+
+        nav .logo {
+            height: 6vw;
+        }
+
+        .logo a img:nth-child(1) {
+            height: 100%;
+            object-fit: cover;
+            filter: drop-shadow(-5px 0px 1px rgba(0, 0, 0, 0.9));
+        }
+
+        .logo a {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 0.5vw;
+        }
+
+        .logo img:nth-child(2) {
+            height: 35%;
+            mix-blend-mode: multiply;
+            object-fit: cover;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2vw;
+        }
+
+        nav ul li a {
+            text-transform: capitalize;
+            font-size: 14px;
+            color: var(--text-light);
+            position: relative;
+        }
+        
+        nav ul li a:hover{
+            color: rgb(255, 198, 42);
+        }
+        nav .bar {
+            display: none;
+            cursor: pointer;
+        }
+
+        .nav-respo {
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            background: #000;
+            z-index: 10000;
+            display: flex;
+            padding: 5vw 10vw;
+            flex-direction: column;
+            color: var(--text-color);
+            left: 100%;
+        }
+
+        .nav-respo h1 {
+            text-transform: uppercase;
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        .nav-respo ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1vw;
+            margin-top: 4vw;
+            list-style: none;
+        }
+
+        .nav-respo ul li {
+            width: 100%;
+        }
+
+        .nav-respo ul li a {
+            font-size: 22px;
+            color: var(--text-color);
+            text-transform: uppercase;
+            width: 100%;
+            display: inline-block;
+        }
+
+        .nav-respo i {
+            position: absolute;
+            top: 2%;
+            right: 5%;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 950px) {
+            nav ul {
+                display: none;
+            }
+
+            nav .bar {
+                display: flex;
+                font-size: 25px;
+                font-weight: 900;
+            }
+
+            nav .logo {
+                height: 10vw;
+            }
+        }
+
+        @media (max-width: 690px) {
+            nav ul {
+                display: none;
+            }
+
+            nav .bar {
+                display: flex;
+                font-size: 25px;
+                font-weight: 900;
+            }
+
+            nav .logo {
+                height: 14vw;
+            }
+
+            .logo a {
+                gap: 1vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                display: none;
+            }
+
+            nav .bar {
+                display: flex;
+                font-size: 25px;
+                font-weight: 900;
+            }
+
+            nav .logo {
+                height: 14vw;
+            }
+
+            .logo a {
+                gap: 1vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-respo">
+            <h1>menu</h1>
+            <ul>
+                <li><a href="/">home</a></li>
+                <li><a href="/about">about us</a></li>
+                <li><a href="/pr">pr</a></li>
+                <li><a href="/product">products</a></li>
+                <li><a href="#">projects</a></li>
+                <li><a href="#">agreements</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+            <i class="close ri-close-line"></i>
+        </div>
+        <nav>
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/delmont-logo.png">
+                    <img class="text" src="/images/text.png">
+                </a>
+            </div>
+            <ul>
+                <li><a href="/">home</a></li>
+                <li><a href="/about">about us</a></li>
+                <li><a href="/pr">pr</a></li>
+                <li><a href="/product">products</a></li>
+                <li><a href="#">projects</a></li>
+                <li><a href="#">agreements</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+            <div class="bar">
+                <i><i class="ri-menu-line"></i></i>
+            </div>
+        </nav>
+
+    </header>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    let open = document.querySelector(".bar")
+    let close = document.querySelector(".close")
+    open.addEventListener("click", () => {
+        gsap.to(".nav-respo", {
+            left: 0
+        })
+    })
+    close.addEventListener("click", () => {
+        gsap.to(".nav-respo", {
+            left: `100%`
+        })
+    })
+</script>
+
+</html>

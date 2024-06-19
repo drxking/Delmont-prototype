@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Delmont Fire and Safety Company in Dubai</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/essentials.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/about.css">
+</head>
+
+<body>
+    <main>
+        <%- include("header") %>
+            <div class="hero">
+                <div class="hero-bg">
+                    <img src="/images/team-2.jpg">
+                </div>
+                <div class="h1-wrapper">
+                    <h1>About </h1>
+                </div>
+                <div class="h1-wrapper">
+                    <h1>delmont</h1>
+                </div>
+                <div class="p-wrapper">
+                <p>Specializes in a wide range of fire protection & safety solutions</p>
+                </div>
+                <div class="buttons">
+                    <a href="#"><button>book an appointment</button></a>
+                </div>
+            </div>
+            <section>
+                <div class="left">
+                    <h1>
+                        DELMONT – FOR FIRE PROTECTION <br> & SAFETY SOLUTIONS</h1>
+
+                    <p>Established in the year 2016, Delmont Fire & Safety LLC is Dubai Civil Defense Approved, UAE
+                        based
+                        (A+ Grade) fire detection and protection system installation and maintenance company.
+                        <br><br>
+                        We specialise in a wide range of services that range from design, supply, installation and
+                        commissioning; to testing and compliance of fire protection & detection systems in accordance
+                        with
+                        the NFPA Standards and Civil Defense legislation and regulations as well as providing service
+                        and
+                        maintenance to existing systems.
+                        <br><br>
+                        At Delmont, our main objective is ensuring our customers are provided with the best solutions.
+                        From
+                        a project-managed installation to servicing and maintenance, we tailor our services to the exact
+                        requirements of your projects. We provide services to our clients around the clock throughout
+                        the
+                        year. With a team of highly experienced & qualified Engineers & Technicians trained to handle
+                        all
+                        types of fire protection systems, Delmont provides businesses with a complete professional Fire
+                        protection service.
+                        <br><br>
+                        We work in conjunction with Interior Contractors, Building Contractors, Project Managers, MEP
+                        Contractors, MEP Consultants and Architects to ensure a planned and systematic installation,
+                        inspection, testing, and commissioning of Fire Safety Essential Services.
+                        <br><br>
+                        With a specialist expertise in all aspects of fire safety, you can rely on us to keep your
+                        building
+                        and business safe.
+                    </p>
+                </div>
+                <div class="right">
+                    <h1>OUR team</h1>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="/images/team-1.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/images/team-2.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <%-include('footer')%>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+    let clutter = ""
+    let text = document.querySelector(".hero p").textContent.split(" ");
+    text.forEach((span) => {
+        clutter += `<span> ${span} </span>`
+    })
+    console.log(clutter)
+    document.querySelector(".hero p").innerHTML = clutter
+    let tl = gsap.timeline()
+    tl.from(".hero h1", {
+        rotate: `5deg`,
+        y: 120,
+        stagger: 0.1,
+        // duration:0.4
+    })
+    tl.from(".hero p span", {
+        opacity: 0,
+        y: 100,
+        stagger: 0.05,
+        duration: 0.7,
+        delay: -0.7
+    })
+    tl.from(".hero .buttons button", {
+        opacity: 0,
+        stagger: 0.1,
+        // duration:0.
+    })
+    gsap.from("section", {
+        opacity: 0,
+        delay: 0.3
+    })
+
+
+    const swiper = new Swiper('.swiper', {
+        direction: 'vertical',
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
+</html>

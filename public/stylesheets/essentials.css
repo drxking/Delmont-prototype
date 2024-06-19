@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --text-color: #fff;
+  --primary-color: rgba(255, 85, 0, 0.9);
+  --secondary-color: rgba(253, 111, 39, 0.8);
+  --text-gray: gray;
+  --text-light: #f3f3f3;
+  --bg-white: #fff;
+  --black: #000;
+}
+html{
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+  -webkit-tap-highlight-color: transparent;
+}
+*::selection {
+  background-color: rgb(0, 225, 255);
+}
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 5vw 10vw;
+}
+section h1 {
+  color: var(--primary-color);
+  font-size: 28px;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 1vw 0;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+section h2 {
+  color: var(--secondary-color);
+  font-size: 25px;
+  text-transform: capitalize;
+  width: 100%;
+  padding: 1vw 0;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+section p {
+  font-size: 18px;
+  color: var(--text-gray);
+  text-align: justify;
+  /* letter-spacing: -0.5px; */
+}
+
+@media (max-width: 950px) {
+  section {
+    padding: 5vw 8vw;
+  }
+
+}
+
+@media (max-width: 690px) {
+  section h1 {
+    font-size: 26px;
+  }
+  section {
+    padding: 5vw 6vw;
+  }
+
+}
+
+@media (max-width: 690px) {
+  section {
+    padding: 5vw 5vw;
+  }
+
+  section h1 {
+    font-size: 25px;
+  }
+
+  section p {
+    font-size: 14px;
+  }
+
+  section h2 {
+    padding: 2vw 0;
+    font-size: 20px;
+  }
+}
